@@ -1,5 +1,7 @@
 class PlacesController < ApplicationController
-  before_action :set_place, only: [:show, :update, :destroy]
+  before_action :set_place, only: [:show]
+  before_action: :authorize_request, only: :create
+  before_action: :set_user_place, only: [:update, :destroy]
 
   # GET /places
   def index
@@ -16,9 +18,9 @@ class PlacesController < ApplicationController
   # POST /places
   def create
     @place = Place.new(place_params)
-
+    @food.user = @current_user
     if @place.save
-      render json: @place, status: :created, location: @place
+      render json: @place, status: :created
     else
       render json: @place.errors, status: :unprocessable_entity
     end
@@ -44,8 +46,12 @@ class PlacesController < ApplicationController
       @place = Place.find(params[:id])
     end
 
+    def set_user_place
+      @place = Food.find(params[:id])
+    end
+
     # Only allow a list of trusted parameters through.
     def place_params
-      params.require(:place).permit(:list, :country, :month, :year, :user_id)
+      params.require(:place).permit(:list, :country, :month, :year)
     end
 end

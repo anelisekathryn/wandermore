@@ -119,11 +119,21 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                        | Priority | Estimated Time | Time Invested | Actual Time |
+| --------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Planning                    |    H     |     6 hrs      |     X hrs     |    X hrs    |
+| Backend set up / Auth       |    H     |     7 hrs      |     X hrs     |    X hrs    |
+| Create database & Seed Data |    H     |     3 hrs      |     X hrs     |    X hrs    |
+| Backend Testing             |    H     |     1 hrs      |     X hrs     |    X hrs    |
+| Frontend Auth               |    H     |     4 hrs      |     X hrs     |    X hrs    |
+| Frontend Routes & Testing   |    H     |     5 hrs      |     X hrs     |    X hrs    |
+| Full CRUD on Places         |    H     |     7 hrs      |     X hrs     |    X hrs    |
+| Layout                      |    H     |     2 hrs      |     X hrs     |    X hrs    |
+| Create Footer               |    H     |     2 hrs      |     X hrs     |    X hrs    |
+| Create All Screens          |    H     |    12 hrs      |     X hrs     |    X hrs    |
+| CSS Styling                 |    M     |    10 hrs      |     X hrs     |    X hrs    |
+| Post MVP goals              |    L     |     6 hrs      |     X hrs     |    X hrs    |
+| TOTAL                       |          |    65 hrs      |     X hrs     |     TBD     |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 

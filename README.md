@@ -132,9 +132,8 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+<img width="490" alt="Screen Shot 2021-12-09 at 11 32 10 PM" src="https://user-images.githubusercontent.com/90531123/145528313-c90f54bb-556d-424f-af67-67d23eb00c14.png">
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
 ***

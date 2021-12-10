@@ -45,8 +45,6 @@ The **Wandermore** MVP goals include a clean-design, user-friendly travel site w
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library          | Description                                |
 | :------------------: | :----------------------------------------- |
 |      React           | Frontend Javascript language. |
@@ -60,6 +58,7 @@ The **Wandermore** MVP goals include a clean-design, user-friendly travel site w
 
 ### Client (Front End)
 
+
 #### Wireframes
 
 View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLKJcpqp8LjBIGgU/wandermore?node-id=0%3A1).
@@ -68,9 +67,11 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 
 <img width="300" alt="Screen Shot 2021-12-09 at 9 15 14 PM" src="https://user-images.githubusercontent.com/90531123/145516353-38030bd2-b99d-4218-bb71-b8a2bfd55b42.png">
 
+
 #### Component Tree
 
 ![Screen Shot 2021-12-09 at 10 18 57 PM](https://user-images.githubusercontent.com/90531123/145521457-dcbf78f7-be17-4c6d-ba24-8a221dda518e.png)
+
 
 #### Component Architecture
 

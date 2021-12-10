@@ -25,7 +25,7 @@
 
 ## MVP
 
-_The **Wandermore** MVP goals include a clean-design, user-friendly travel site where users can document places they have been, want to go, and upcoming trips once they are logged in.
+The **Wandermore** MVP goals include a clean-design, user-friendly travel site where users can document places they have been, want to go, and upcoming trips once they are logged in.
 
 <br>
 
@@ -67,8 +67,6 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 ![Screen Shot 2021-12-09 at 9 57 47 PM](https://user-images.githubusercontent.com/90531123/145519699-8bfc38d7-d418-491b-81ec-d743e5a6ec99.png)
 
 <img width="300" alt="Screen Shot 2021-12-09 at 9 15 14 PM" src="https://user-images.githubusercontent.com/90531123/145516353-38030bd2-b99d-4218-bb71-b8a2bfd55b42.png">
-
-- Mobile Resource Index
 
 #### Component Tree
 
@@ -121,14 +119,16 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Incorporate color-coordinated pins to the map for an additional visual representation of places
+- Add the ability to add other users as friends and view their profile/places
+- Add additional details to places (cities, notes, places stayed, photos, recommendations)
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> This section will include a brief code snippet of functionality that you are proud of and a brief description.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> This section will include a list of major issues encountered and their resolution.

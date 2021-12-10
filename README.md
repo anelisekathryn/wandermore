@@ -70,26 +70,48 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Screen Shot 2021-12-09 at 10 18 57 PM](https://user-images.githubusercontent.com/90531123/145521457-dcbf78f7-be17-4c6d-ba24-8a221dda518e.png)
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
-``` structure
-
+``` 
 src
 |__ assets/
+      |__ css
+          |__ Layout.css
+          |__ App.css
+          |__ Index.css
+          |__ Home.css
+          |__ SignIn.css
+          |__ SignUp.css
+          |__ About.css
+          |__ UserProfile.css
+          |__ PlaceDetail.css
+          |__ PlaceAdd.css
+          |__ PlaceEdit.css
       |__ fonts
       |__ graphics
       |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Layout.jsx
+      |__ Footer.jsx
+      |__ Place.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ screens/
+      |__ Home.jsx
+      |__ SignIn.jsx
+      |__ SignUp.jsx
+      |__ About.jsx
+      |__ UserProfile.jsx
+      |__ PlaceDetail.jsx
+      |__ PlaceAdd.jsx
+      |__ PlaceEdit.jsx
 |__ services/
-
+      |__ apiConfig.jsx
+      |__ auth.jsx
+|__ App.jsx
+|__ Index.jsx
 ```
 
 #### Time Estimates

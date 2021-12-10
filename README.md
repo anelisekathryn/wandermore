@@ -35,29 +35,28 @@ The **Wandermore** MVP goals include a clean-design, user-friendly travel site w
 - Full CRUD frontend built with React
 - User can create an account.
 - User can see/do the following on their profile:
-  -  view all places (in categories of places traveled, upcoming travels, and places the user wants to travel to)
-  -  add places
-  -  edit places
-  -  delete places
+  - view all places (in categories of places traveled, upcoming travels, and places the user wants to travel to)
+  - add places
+  - edit places
+  - delete places
 - CSS styling to match wireframe
 
 <br>
 
 ### Libraries and Dependencies
 
-|     Library          | Description                                |
-| :------------------: | :----------------------------------------- |
-|      React           | Frontend Javascript language. |
-|   React Router Dom   | Routing for React |
-| Ruby on Rails        | Web-application framework for a databse written in rails using MVC pattern |
-|     Axios            | Allows full CRUD |
-|  Bcrypt              | Password handling - algorithm to hash/secure a password |
-|  CORS                | Cross origin resource sharing in Ruby on Rails |
+|     Library      | Description                                                                |
+| :--------------: | :------------------------------------------------------------------------- |
+|      React       | Frontend Javascript language.                                              |
+| React Router Dom | Routing for React                                                          |
+|  Ruby on Rails   | Web-application framework for a databse written in rails using MVC pattern |
+|      Axios       | Allows full CRUD                                                           |
+|      Bcrypt      | Password handling - algorithm to hash/secure a password                    |
+|       CORS       | Cross origin resource sharing in Ruby on Rails                             |
 
 <br>
 
 ### Client (Front End)
-
 
 #### Wireframes
 
@@ -67,15 +66,13 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 
 <img width="300" alt="Screen Shot 2021-12-09 at 9 15 14 PM" src="https://user-images.githubusercontent.com/90531123/145516353-38030bd2-b99d-4218-bb71-b8a2bfd55b42.png">
 
-
 #### Component Tree
 
 ![Screen Shot 2021-12-09 at 10 18 57 PM](https://user-images.githubusercontent.com/90531123/145521457-dcbf78f7-be17-4c6d-ba24-8a221dda518e.png)
 
-
 #### Component Architecture
 
-``` 
+```
 src
 |__ assets/
       |__ css
@@ -121,21 +118,19 @@ src
 
 | Task                        | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning                    |    H     |     6 hrs      |     X hrs     |    X hrs    |
-| Backend set up / Auth       |    H     |     7 hrs      |     X hrs     |    X hrs    |
-| Create database & Seed Data |    H     |     3 hrs      |     X hrs     |    X hrs    |
-| Backend Testing             |    H     |     1 hrs      |     X hrs     |    X hrs    |
+| Planning                    |    H     |     6 hrs      |     6 hrs     |    X hrs    |
+| Backend set up / Auth       |    H     |     7 hrs      |     4 hrs     |    X hrs    |
+| Create Database & Seed Data |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
+| Backend Routes & Testing    |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
 | Frontend Auth               |    H     |     4 hrs      |     X hrs     |    X hrs    |
 | Frontend Routes & Testing   |    H     |     5 hrs      |     X hrs     |    X hrs    |
 | Full CRUD on Places         |    H     |     7 hrs      |     X hrs     |    X hrs    |
 | Layout                      |    H     |     2 hrs      |     X hrs     |    X hrs    |
 | Create Footer               |    H     |     2 hrs      |     X hrs     |    X hrs    |
-| Create All Screens          |    H     |    12 hrs      |     X hrs     |    X hrs    |
-| CSS Styling                 |    M     |    10 hrs      |     X hrs     |    X hrs    |
+| Create All Screens          |    H     |     12 hrs     |     X hrs     |    X hrs    |
+| CSS Styling                 |    M     |     10 hrs     |     X hrs     |    X hrs    |
 | Post MVP goals              |    L     |     6 hrs      |     X hrs     |    X hrs    |
-| TOTAL                       |          |    65 hrs      |     X hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| TOTAL                       |          |     65 hrs     |     X hrs     |     TBD     |
 
 <br>
 
@@ -147,7 +142,7 @@ src
 
 <br>
 
-***
+---
 
 ## Post-MVP
 
@@ -155,7 +150,7 @@ src
 - Add the ability to add other users as friends and view their profile/places
 - Add additional details to places (cities, notes, places stayed, photos, recommendations)
 
-***
+---
 
 ## Code Showcase
 

@@ -1,18 +1,32 @@
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import Home from './screens/Home';
+import Layout from './components/Layout';
+import MainContainer from './containers/MainContainer';
+import SignIn from './screens/SignIn';
+import SignUp from './screens/SignUp';
+
 
 function App() {
+
   return (
     <div className="App">        
-      <Switch>
+      <Layout>
+        <Switch>
 
-        <Route path='/'>
-          <Home />
-        </Route>
+          <Route path='/signin'>
+            <SignIn/>
+          </Route>
 
-          
-      </Switch>
+          <Route path='/signup'>
+            <SignUp/>
+          </Route>
+
+          <Route path='/'>
+            <MainContainer/>
+          </Route>
+
+        </Switch>
+      </Layout>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show]
-  before_action: :authorize_request, only: :create
+  before_action: :authorize_request, only: [:index, :create, :update, :destroy]
   before_action: :set_user_place, only: [:update, :destroy]
 
   # GET /places
   def index
-    @places = Place.all
+    @places = @current_user.places
 
     render json: @places
   end

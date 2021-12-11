@@ -7,7 +7,8 @@ import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import {
   loginUser,
-  verifyUser,
+  registerUser,
+  verifyUser
 } from './services/auth.js'
 
 function App() {
@@ -26,7 +27,13 @@ function App() {
   const handleSignIn = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/places');
+  };
+
+  const handleSignUp = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    history.push('/places');
   };
 
   return (
@@ -39,7 +46,7 @@ function App() {
           </Route>
 
           <Route path='/signup'>
-            <SignUp/>
+            <SignUp handleSignUp={handleSignUp}/>
           </Route>
 
           <Route path='/'>

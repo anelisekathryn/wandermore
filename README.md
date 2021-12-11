@@ -77,8 +77,6 @@ src
 |__ assets/
       |__ css
           |__ Layout.css
-          |__ App.css
-          |__ Index.css
           |__ Home.css
           |__ SignIn.css
           |__ SignUp.css
@@ -108,7 +106,9 @@ src
 |__ services/
       |__ apiConfig.jsx
       |__ auth.jsx
+|__ App.css
 |__ App.jsx
+|__ Index.css
 |__ Index.jsx
 ```
 

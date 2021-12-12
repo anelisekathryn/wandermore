@@ -1,18 +1,60 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Home from './screens/Home';
+import { useState, useEffect } from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import Layout from './components/Layout';
+import MainContainer from './containers/MainContainer';
+import SignIn from './screens/SignIn';
+import SignUp from './screens/SignUp';
+import {
+  loginUser,
+  registerUser,
+  verifyUser
+} from './services/auth.js'
 
 function App() {
+
+  const [currentUser, setCurrentUser] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
+
+  const handleSignIn = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    history.push('/places');
+  };
+
+  const handleSignUp = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    history.push('/places');
+  };
+
   return (
     <div className="App">        
-      <Switch>
+      <Layout>
+        <Switch>
 
-        <Route path='/'>
-          <Home />
-        </Route>
+          <Route path='/signin'>
+            <SignIn handleSignIn={handleSignIn}/>
+          </Route>
 
-          
-      </Switch>
+          <Route path='/signup'>
+            <SignUp handleSignUp={handleSignUp}/>
+          </Route>
+
+          <Route path='/'>
+            <MainContainer/>
+          </Route>
+
+        </Switch>
+      </Layout>
     </div>
   );
 }

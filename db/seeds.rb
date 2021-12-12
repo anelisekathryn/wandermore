@@ -12,3 +12,7 @@ User.destroy_all
 @admin = User.create!(username: 'anelise', email: 'anelise@test.com', password: 'ab1234')
 
 puts "#{User.count} users created"
+
+Place.create!(list: 'traveled', country: 'peru', month: 'august', year: '2017', user_id: 1)
+
+puts "#{Place.count} places created"

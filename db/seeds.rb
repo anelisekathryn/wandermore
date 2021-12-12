@@ -13,6 +13,6 @@ User.destroy_all
 
 puts "#{User.count} users created"
 
-Place.create!(list: 'traveled', country: 'peru', month: 'august', year: '2017', user_id: 1)
+Place.create!(list: 'traveled', country: 'Peru', month: 'August', year: '2017', user: @admin)
 
 puts "#{Place.count} places created"

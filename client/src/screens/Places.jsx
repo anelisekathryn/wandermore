@@ -7,12 +7,10 @@ export default function Places({places, currentUser}) {
       <p>places will be here</p>
       {places.map((place) => (
         <div key={place.id}>
-          <Link to={`/places/${place.id}`}>
+          {/* <Link to={`/places/${place.id}`}> */}
             <p>{place.list}</p>
-            <p>{place.country}</p>
-            <p>{place.month}</p>
-            <p>{place.year}</p>
-          </Link>
+            <p>{place.country} | {place.month} {place.year}</p>
+          {/* </Link> */}
         </div>
       ))}
       <Link to ='/places/add'>

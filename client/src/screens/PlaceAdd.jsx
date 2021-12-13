@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import "react-datetime/css/react-datetime.css";
 import countries from '../services/countries'
+import years from '../services/years'
 
 export default function PlaceAdd({handlePlaceCreate}) {
 
@@ -40,21 +42,20 @@ export default function PlaceAdd({handlePlaceCreate}) {
         </label>
         <br />
         <br />
-        
-        <select onChange={handleChange} defaultValue='default'>
+        <label>Country:</label>
+        <select name='country' onChange={handleChange} defaultValue='default'>
           <option disabledvalue='default'>
             – select a country -
           </option>
           {countries.map((country) => (
-            <option name='country' value={country.name} key={country.id}>
+            <option value={country.name} key={country.id}>
             {country.name}
             </option>
           ))}
         </select>
-        
         <br />
         <br />
-
+      
       <label>
         Month:  
           <input
@@ -63,8 +64,27 @@ export default function PlaceAdd({handlePlaceCreate}) {
             value={month}
             onChange={handleChange}
           />
-      </label>
-      <label>
+        </label>
+
+      <br />
+      <br />
+      
+      <label>Year:</label>
+        <select name='year' onChange={handleChange} defaultValue='default'>
+          <option disabledvalue='default'>
+            – select a year -
+          </option>
+          {years.map((year) => (
+            <option value={year.year} key={year.id}>
+            {year.year}
+            </option>
+          ))}
+        </select>
+      <br />
+      <br />
+
+        
+      {/* <label>
         Year:
           <input
             type='text'
@@ -72,7 +92,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
             value={year}
             onChange={handleChange}
           />
-      </label>
+      </label> */}
       <button>add</button>
     </form>
     </div>

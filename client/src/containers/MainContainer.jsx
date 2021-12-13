@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Places from '../screens/Places';
 import PlaceDetail from '../screens/PlaceDetail'
 import PlaceAdd from '../screens/PlaceAdd';
+import PlaceEdit from '../screens/PlaceEdit';
 
 
 export default function MainContainer({currentUser}) {
@@ -31,6 +32,10 @@ export default function MainContainer({currentUser}) {
     
     <div>
       <Switch>
+
+      <Route path='/places/:id/edit'>
+          <PlaceEdit places={places} />
+        </Route>
 
       <Route path='/places/add'>
           <PlaceAdd

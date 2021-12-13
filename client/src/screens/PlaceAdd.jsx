@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import countries from '../services/countries'
 
 export default function PlaceAdd({handlePlaceCreate}) {
 
@@ -36,17 +37,24 @@ export default function PlaceAdd({handlePlaceCreate}) {
             onChange={handleChange}
             required
           />
-      </label>
-      <label>
-        Country:
-          <input
-            type='text'
-            name='country'
-            value={country}
-            onChange={handleChange}
-            required
-          />
-      </label>
+        </label>
+        <br />
+        <br />
+        
+        <select onChange={handleChange} defaultValue='default'>
+          <option disabledvalue='default'>
+            – select a country -
+          </option>
+          {countries.map((country) => (
+            <option name='country' value={country.name} key={country.id}>
+            {country.name}
+            </option>
+          ))}
+        </select>
+        
+        <br />
+        <br />
+
       <label>
         Month:  
           <input
@@ -71,6 +79,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
   )
 }
 
+// CITATION: countries JSON file from https://stefangabos.github.io/world_countries/
 
 
 

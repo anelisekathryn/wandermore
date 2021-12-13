@@ -15,8 +15,6 @@ export default function PlaceDetail({ handlePlaceDelete }) {
     fetchPlace();
   }, [id]);
 
-  // debugger
-
   return (
     <div>
       <h2>place detail here</h2>

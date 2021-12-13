@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import "react-datetime/css/react-datetime.css";
+import lists from '../services/lists'
 import countries from '../services/countries'
+import months from '../services/months'
 import years from '../services/years'
 
 export default function PlaceAdd({handlePlaceCreate}) {
@@ -11,7 +13,6 @@ export default function PlaceAdd({handlePlaceCreate}) {
     month: '',
     year: '',
   });
-  const { list, country, month, year } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,22 +25,23 @@ export default function PlaceAdd({handlePlaceCreate}) {
   return (
     <div>
       <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handlePlaceCreate(formData);
-      }}
-      >
-      <h3>add a new place to your list</h3>
-      <label>
-        List:
-          <input
-            type='text'
-            name='list'
-            value={list}
-            onChange={handleChange}
-            required
-          />
-        </label>
+        onSubmit={(e) => {
+          e.preventDefault();
+          handlePlaceCreate(formData);
+        }}
+        >
+        <h3>add a new place to your list</h3>
+        <label>List:</label>
+        <select name='list' onChange={handleChange} defaultValue='default'>
+          <option disabledvalue='default'>
+            – select a list -
+          </option>
+          {lists.map((list) => (
+            <option value={list.list} key={list.id}>
+            {list.list}
+            </option>
+          ))}
+        </select>
         <br />
         <br />
         <label>Country:</label>
@@ -55,46 +57,34 @@ export default function PlaceAdd({handlePlaceCreate}) {
         </select>
         <br />
         <br />
-      
-      <label>
-        Month:  
-          <input
-            type='text'
-            name='month'
-            value={month}
-            onChange={handleChange}
-          />
-        </label>
-
-      <br />
-      <br />
-      
-      <label>Year:</label>
-        <select name='year' onChange={handleChange} defaultValue='default'>
+        <label>Month:</label>
+        <select name='month' onChange={handleChange} defaultValue='default'>
           <option disabledvalue='default'>
-            – select a year -
+            – select a month -
           </option>
-          {years.map((year) => (
-            <option value={year.year} key={year.id}>
-            {year.year}
+          {months.map((month) => (
+            <option value={month.month} key={month.id}>
+            {month.month}
             </option>
           ))}
         </select>
-      <br />
-      <br />
-
-        
-      {/* <label>
-        Year:
-          <input
-            type='text'
-            name='year'
-            value={year}
-            onChange={handleChange}
-          />
-      </label> */}
-      <button>add</button>
-    </form>
+        <br />
+        <br />
+        <label>Year:</label>
+          <select name='year' onChange={handleChange} defaultValue='default'>
+            <option disabledvalue='default'>
+              – select a year -
+            </option>
+            {years.map((year) => (
+              <option value={year.year} key={year.id}>
+              {year.year}
+              </option>
+            ))}
+          </select>
+        <br />
+        <br />
+        <button>add</button>
+      </form>
     </div>
   )
 }

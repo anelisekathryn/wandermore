@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show]
-  before_action: :authorize_request, only: [:index, :create, :update, :destroy]
-  before_action: :set_user_place, only: [:update, :destroy]
+  before_action :authorize_request, only: [:index, :create, :update, :destroy]
+  before_action :set_user_place, only: [:update, :destroy]
 
   # GET /places
   def index
@@ -18,7 +18,7 @@ class PlacesController < ApplicationController
   # POST /places
   def create
     @place = Place.new(place_params)
-    @food.user = @current_user
+    @place.user = @current_user
     if @place.save
       render json: @place, status: :created
     else
@@ -47,7 +47,7 @@ class PlacesController < ApplicationController
     end
 
     def set_user_place
-      @place = Food.find(params[:id])
+      @place = Place.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

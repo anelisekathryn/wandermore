@@ -19,7 +19,7 @@ export default function PlaceDetail({ places }) {
     <div>
       <h2>place detail here</h2>
       <h3>{place?.country} | {place?.month} {place?.year}</h3>
-      <Link to ='/places/:id/edit'>
+      <Link to ={`/places/${id}/edit`}>
         <button>edit</button>
       </Link>
       <Link>

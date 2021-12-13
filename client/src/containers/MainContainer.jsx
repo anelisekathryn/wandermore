@@ -1,6 +1,6 @@
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getAllPlaces, getOnePlace, postPlace } from '../services/place';
+import { getAllPlaces, postPlace, putPlace } from '../services/place';
 import Home from '../screens/Home';
 import Places from '../screens/Places';
 import PlaceDetail from '../screens/PlaceDetail'
@@ -27,6 +27,16 @@ export default function MainContainer({currentUser}) {
     history.push('/places');
   };
 
+  const handlePlaceUpdate = async (id, formData) => {
+    const newPlace = await putPlace(id, formData);
+    setPlaces((prevState) =>
+      prevState.map((place) => {
+        return place.id === Number(id) ? newPlace : place;
+      })
+    );
+    history.push('/places');
+  };
+
   return (
 
     
@@ -34,7 +44,7 @@ export default function MainContainer({currentUser}) {
       <Switch>
 
       <Route path='/places/:id/edit'>
-          <PlaceEdit places={places} />
+          <PlaceEdit places={places} handlePlaceUpdate={handlePlaceUpdate} />
         </Route>
 
       <Route path='/places/add'>

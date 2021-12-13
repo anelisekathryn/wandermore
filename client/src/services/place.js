@@ -19,3 +19,7 @@ export const putPlace = async (id, placeData) => {
   const resp = await api.put(`/places/${id}`, { place: placeData });
   return resp.data;
 }
+
+export const deletePlace = async (id) => {
+  await api.delete(`/places/${id}`);
+};

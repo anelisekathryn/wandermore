@@ -1,6 +1,6 @@
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getAllPlaces, postPlace, putPlace } from '../services/place';
+import { getAllPlaces, postPlace, putPlace, deletePlace } from '../services/place';
 import Home from '../screens/Home';
 import Places from '../screens/Places';
 import PlaceDetail from '../screens/PlaceDetail'
@@ -37,6 +37,12 @@ export default function MainContainer({currentUser}) {
     history.push('/places');
   };
 
+  const handlePlaceDelete = async (id) => {
+    await deletePlace(id);
+    setPlaces((prevState) => prevState.filter((place) => place.id !== Number(id)));
+    history.push('/places');
+  };
+
   return (
 
     
@@ -54,7 +60,10 @@ export default function MainContainer({currentUser}) {
         </Route>
 
         <Route path='/places/:id'>
-          <PlaceDetail places={places} currentUser={currentUser} />
+          <PlaceDetail
+            currentUser={currentUser}
+            handlePlaceDelete={handlePlaceDelete}
+          />
         </Route>
 
       <Route path='/places'>

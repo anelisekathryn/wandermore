@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getOnePlace } from '../services/place';
 
-export default function PlaceDetail({ places }) {
+export default function PlaceDetail({ handlePlaceDelete }) {
   
   const [place, setPlace] = useState(null);
   const { id } = useParams();
@@ -15,6 +15,8 @@ export default function PlaceDetail({ places }) {
     fetchPlace();
   }, [id]);
 
+  // debugger
+
   return (
     <div>
       <h2>place detail here</h2>
@@ -22,9 +24,7 @@ export default function PlaceDetail({ places }) {
       <Link to ={`/places/${id}/edit`}>
         <button>edit</button>
       </Link>
-      <Link>
-        <button>delete</button>
-      </Link>
+      <button onClick={() => handlePlaceDelete(id)}>delete</button>
     </div>
   )
 }

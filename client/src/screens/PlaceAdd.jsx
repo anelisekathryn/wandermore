@@ -11,13 +11,10 @@ export default function PlaceAdd({handlePlaceCreate}) {
   const { list, country, month, year } = formData;
 
   const handleChange = (e) => {
-    const { list, country, month, year, value } = e.target;
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [list]: value,
-      [country]: value,
-      [month]: value,
-      [year]: value,
+      [name]: value,
     }));
   };
 
@@ -37,6 +34,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
             name='list'
             value={list}
             onChange={handleChange}
+            required
           />
       </label>
       <label>
@@ -46,6 +44,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
             name='country'
             value={country}
             onChange={handleChange}
+            required
           />
       </label>
       <label>
@@ -53,7 +52,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
           <input
             type='text'
             name='month'
-            month={month}
+            value={month}
             onChange={handleChange}
           />
       </label>
@@ -62,7 +61,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
           <input
             type='text'
             name='year'
-            year={year}
+            value={year}
             onChange={handleChange}
           />
       </label>

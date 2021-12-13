@@ -1,8 +1,9 @@
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getAllPlaces, postPlace } from '../services/place';
+import { getAllPlaces, getOnePlace, postPlace } from '../services/place';
 import Home from '../screens/Home';
 import Places from '../screens/Places';
+import PlaceDetail from '../screens/PlaceDetail'
 import PlaceAdd from '../screens/PlaceAdd';
 
 
@@ -16,8 +17,8 @@ export default function MainContainer({currentUser}) {
       const placeList = await getAllPlaces();
       setPlaces(placeList);
     };
-    fetchPlaces();
-  }, []);
+    if (currentUser) fetchPlaces();
+  }, [currentUser]);
 
   const handlePlaceCreate = async (formData) => {
     const newPlace = await postPlace(formData);
@@ -35,6 +36,10 @@ export default function MainContainer({currentUser}) {
           <PlaceAdd
             handlePlaceCreate={handlePlaceCreate}
           />
+        </Route>
+
+        <Route path='/places/:id'>
+          <PlaceDetail places={places} currentUser={currentUser} />
         </Route>
 
       <Route path='/places'>

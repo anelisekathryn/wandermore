@@ -122,9 +122,9 @@ src
 | Backend set up / Auth       |    H     |     7 hrs      |     4 hrs     |    X hrs    |
 | Create Database & Seed Data |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
 | Backend Routes & Testing    |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
-| Frontend Auth               |    H     |     4 hrs      |     X hrs     |    X hrs    |
-| Frontend Routes & Testing   |    H     |     5 hrs      |     X hrs     |    X hrs    |
-| Full CRUD on Places         |    H     |     7 hrs      |     X hrs     |    X hrs    |
+| Frontend Auth               |    H     |     4 hrs      |     3 hrs     |    X hrs    |
+| Frontend Routes & Testing   |    H     |     5 hrs      |     3 hrs     |    X hrs    |
+| Full CRUD on Places         |    H     |     7 hrs      |    10 hrs     |    X hrs    |
 | Layout                      |    H     |     2 hrs      |     X hrs     |    X hrs    |
 | Create Footer               |    H     |     2 hrs      |     X hrs     |    X hrs    |
 | Create All Screens          |    H     |     12 hrs     |     X hrs     |    X hrs    |

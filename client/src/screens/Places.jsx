@@ -1,3 +1,4 @@
+import '../assets/css/Places.css';
 import { Link } from 'react-router-dom';
 
 export default function Places({ places, currentUser }) {
@@ -9,6 +10,7 @@ export default function Places({ places, currentUser }) {
   return (
     <div>
       <h2>{currentUser?.username}</h2>
+      <img className='profile-img' src={currentUser?.profile_image_url} alt='user profile image'></img>
       <h3>PLACES I'VE TRAVELED TO</h3>
       {placesTraveled.map((place) => (
         <div key={place.id}>

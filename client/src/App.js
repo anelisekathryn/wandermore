@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import MainContainer from './containers/MainContainer';
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
+import About from './screens/About';
 import {
   loginUser,
   registerUser,
@@ -40,6 +41,10 @@ function App() {
     <div className="App">        
       <Layout>
         <Switch>
+
+          <Route path='/about'>
+            <About />
+          </Route>
 
           <Route path='/signin'>
             <SignIn handleSignIn={handleSignIn}/>

@@ -32,12 +32,12 @@ export default function PlaceAdd({handlePlaceCreate}) {
         >
         <h3>add a new place to your list</h3>
         <label>List:</label>
-        <select name='list' onChange={handleChange} defaultValue='default'>
+        <select name='list' onChange={handleChange} defaultValue='default' >
           <option disabledvalue='default'>
             – select a list -
           </option>
           {lists.map((list) => (
-            <option value={list.list} key={list.id}>
+            <option value={list.list} key={list.id} required>
             {list.list}
             </option>
           ))}
@@ -45,12 +45,12 @@ export default function PlaceAdd({handlePlaceCreate}) {
         <br />
         <br />
         <label>Country:</label>
-        <select name='country' onChange={handleChange} defaultValue='default'>
+        <select name='country' onChange={handleChange} defaultValue='default' >
           <option disabledvalue='default'>
             – select a country -
           </option>
           {countries.map((country) => (
-            <option value={country.name} key={country.id}>
+            <option value={country.name} key={country.id} required>
             {country.name}
             </option>
           ))}

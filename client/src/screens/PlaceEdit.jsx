@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import lists from '../services/lists'
+import countries from '../services/countries'
+import months from '../services/months'
+import years from '../services/years'
 
 export default function PlaceEdit({ places, handlePlaceUpdate }) {
   
@@ -9,7 +13,6 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
     month: '',
     year: '',
   });
-  const { list, country, month, year } = formData;
   const { id } = useParams()
   
   useEffect(() => {
@@ -41,45 +44,59 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
         handlePlaceUpdate(id, formData);
       }}
       >
-      <h3>edit</h3>
-      <label>
-        List:
-          <input
-            type='text'
-            name='list'
-            value={list}
-            onChange={handleChange}
-            required
-          />
-      </label>
-      <label>
-        Country:
-          <input
-            type='text'
-            name='country'
-            value={country}
-            onChange={handleChange}
-            required
-          />
-      </label>
-      <label>
-        Month:  
-          <input
-            type='text'
-            name='month'
-            value={month}
-            onChange={handleChange}
-          />
-      </label>
-      <label>
-        Year:
-          <input
-            type='text'
-            name='year'
-            value={year}
-            onChange={handleChange}
-          />
-      </label>
+        <h3>edit</h3>
+        <label>List:</label>
+        <select name='list' onChange={handleChange} defaultValue='state'>
+        <option disabledvalue='state'>
+            {formData.list}
+          </option>
+          {lists.map((list) => (
+            <option value={list.list} key={list.id} required>
+            {list.list}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        <label>Country:</label>
+        <select name='country' onChange={handleChange} defaultValue='state'>
+          <option disabledvalue='state'>
+            {formData.country}
+          </option>
+          {countries.map((country) => (
+            <option value={country.name} key={country.id} required>
+            {country.name}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        <label>Month:</label>
+        <select name='month' onChange={handleChange} defaultValue='state'>
+        <option disabledvalue='state'>
+            {formData.month}
+          </option>
+          {months.map((month) => (
+            <option value={month.month} key={month.id}>
+            {month.month}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        <label>Year:</label>
+          <select name='year' onChange={handleChange} defaultValue='state'>
+          <option disabledvalue='state'>
+            {formData.year}
+          </option>
+            {years.map((year) => (
+              <option value={year.year} key={year.id}>
+              {year.year}
+              </option>
+            ))}
+          </select>
+        <br />
+        <br />
       <button>update</button>
       </form>
     </div>

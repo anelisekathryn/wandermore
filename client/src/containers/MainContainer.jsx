@@ -67,6 +67,13 @@ export default function MainContainer({currentUser}) {
         </Route>
 
         <Route path='/places'>
+          <Places
+            places={places}
+            currentUser={currentUser}
+          />
+        </Route>
+
+        {/* <Route path='/places'>
           {currentUser ?
             <Places
             places={places}
@@ -74,7 +81,7 @@ export default function MainContainer({currentUser}) {
             />
             : <Redirect to='/signin' />
           }
-        </Route>
+        </Route> */}
 
         <Route path='/'>
           <Home />

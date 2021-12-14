@@ -116,21 +116,22 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                        | Priority | Estimated Time | Time Invested | Actual Time |
-| --------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning                    |    H     |     6 hrs      |     6 hrs     |    X hrs    |
-| Backend set up / Auth       |    H     |     7 hrs      |     4 hrs     |    X hrs    |
-| Create Database & Seed Data |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
-| Backend Routes & Testing    |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
-| Frontend Auth               |    H     |     4 hrs      |     3 hrs     |    X hrs    |
-| Frontend Routes & Testing   |    H     |     5 hrs      |     3 hrs     |    X hrs    |
-| Full CRUD on Places         |    H     |     7 hrs      |    10 hrs     |    X hrs    |
-| Layout                      |    H     |     2 hrs      |     X hrs     |    X hrs    |
-| Create Footer               |    H     |     2 hrs      |     X hrs     |    X hrs    |
-| Create All Screens          |    H     |     12 hrs     |     X hrs     |    X hrs    |
-| CSS Styling                 |    M     |     10 hrs     |     X hrs     |    X hrs    |
-| Post MVP goals              |    L     |     6 hrs      |     X hrs     |    X hrs    |
-| TOTAL                       |          |     65 hrs     |     X hrs     |     TBD     |
+| Task                                     | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Planning                                 |    H     |     6 hrs      |     6 hrs     |    X hrs    |
+| Backend set up / Auth                    |    H     |     7 hrs      |     4 hrs     |    X hrs    |
+| Create Database & Seed Data              |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
+| Backend Routes & Testing                 |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
+| Frontend Auth                            |    H     |     4 hrs      |     3 hrs     |    X hrs    |
+| Frontend Routes & Testing                |    H     |     5 hrs      |     3 hrs     |    X hrs    |
+| Full CRUD on Places                      |    H     |     7 hrs      |    10 hrs     |    X hrs    |
+| Layout                                   |    H     |     2 hrs      |     2 hrs     |    X hrs    |
+| Create Footer                            |    H     |     2 hrs      |     2 hrs     |    X hrs    |
+| Create All Screens                       |    H     |     12 hrs     |    12 hrs     |    X hrs    |
+| Component Updates + Add'l Frontend Logic |    H     |     4 hrs      |     4 hrs     |    X hrs    |
+| CSS Styling                              |    M     |     10 hrs     |     X hrs     |    X hrs    |
+| Post MVP goals                           |    L     |     6 hrs      |     X hrs     |    X hrs    |
+| TOTAL                                    |          |     65 hrs     |     X hrs     |     TBD     |
 
 <br>
 

@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import countries from '../services/countries'
+import "react-datetime/css/react-datetime.css";
+import lists from '../utils/lists'
+import countries from '../utils/countries'
+import months from '../utils/months'
+import years from '../utils/years'
 
 export default function PlaceAdd({handlePlaceCreate}) {
 
@@ -9,7 +13,6 @@ export default function PlaceAdd({handlePlaceCreate}) {
     month: '',
     year: '',
   });
-  const { list, country, month, year } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,59 +25,66 @@ export default function PlaceAdd({handlePlaceCreate}) {
   return (
     <div>
       <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handlePlaceCreate(formData);
-      }}
-      >
-      <h3>add a new place to your list</h3>
-      <label>
-        List:
-          <input
-            type='text'
-            name='list'
-            value={list}
-            onChange={handleChange}
-            required
-          />
-        </label>
+        onSubmit={(e) => {
+          e.preventDefault();
+          handlePlaceCreate(formData);
+        }}
+        >
+        <h3>add a new place to your list</h3>
+        <label>List:</label>
+        <select name='list' onChange={handleChange} defaultValue='default' >
+          <option disabledvalue='default'>
+            – select a list -
+          </option>
+          {lists.map((list) => (
+            <option value={list.list} key={list.id} required>
+            {list.list}
+            </option>
+          ))}
+        </select>
         <br />
         <br />
-        
-        <select onChange={handleChange} defaultValue='default'>
+        <label>Country:</label>
+        <select name='country' onChange={handleChange} defaultValue='default' >
           <option disabledvalue='default'>
             – select a country -
           </option>
           {countries.map((country) => (
-            <option name='country' value={country.name} key={country.id}>
+            <option value={country.name} key={country.id} required>
             {country.name}
             </option>
           ))}
         </select>
-        
         <br />
         <br />
-
-      <label>
-        Month:  
-          <input
-            type='text'
-            name='month'
-            value={month}
-            onChange={handleChange}
-          />
-      </label>
-      <label>
-        Year:
-          <input
-            type='text'
-            name='year'
-            value={year}
-            onChange={handleChange}
-          />
-      </label>
-      <button>add</button>
-    </form>
+        <label>Month:</label>
+        <select name='month' onChange={handleChange} defaultValue='default'>
+          <option disabledvalue='default'>
+            – select a month -
+          </option>
+          {months.map((month) => (
+            <option value={month.month} key={month.id}>
+            {month.month}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        <label>Year:</label>
+          <select name='year' onChange={handleChange} defaultValue='default'>
+            <option disabledvalue='default'>
+              – select a year -
+            </option>
+            {years.map((year) => (
+              <option value={year.year} key={year.id}>
+              {year.year}
+              </option>
+            ))}
+          </select>
+        <br />
+        <br />
+        <button>add</button>
+      </form>
     </div>
   )
 }

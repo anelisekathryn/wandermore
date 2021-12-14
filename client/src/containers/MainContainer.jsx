@@ -66,14 +66,14 @@ export default function MainContainer({currentUser}) {
           />
         </Route>
 
-        <Route path='/places'>
+        {/* <Route path='/places'>
           <Places
             places={places}
             currentUser={currentUser}
           />
-        </Route>
+        </Route> */}
 
-        {/* <Route path='/places'>
+        <Route path='/places'>
           {currentUser ?
             <Places
             places={places}
@@ -81,11 +81,19 @@ export default function MainContainer({currentUser}) {
             />
             : <Redirect to='/signin' />
           }
-        </Route> */}
+        </Route>
 
         <Route path='/'>
-          <Home />
+          {!currentUser ?
+            <Home
+            places={places}
+            currentUser={currentUser}
+            />
+            : <Redirect to='/places' />
+          }
         </Route>
+
+
 
       </Switch>
     </div>

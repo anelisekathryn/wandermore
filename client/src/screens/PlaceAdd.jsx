@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import "react-datetime/css/react-datetime.css";
-import lists from '../services/lists'
-import countries from '../services/countries'
-import months from '../services/months'
-import years from '../services/years'
+import lists from '../utils/lists'
+import countries from '../utils/countries'
+import months from '../utils/months'
+import years from '../utils/years'
 
 export default function PlaceAdd({handlePlaceCreate}) {
 

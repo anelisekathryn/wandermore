@@ -9,7 +9,8 @@ import About from './screens/About';
 import {
   loginUser,
   registerUser,
-  verifyUser
+  verifyUser,
+  removeToken
 } from './services/auth.js'
 
 function App() {
@@ -38,27 +39,33 @@ function App() {
     history.push('/places');
   };
 
+  const handleSignOut = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+    history.push('/');
+  };
+
   return (
     <div className="App">        
-      <Layout currentUser={currentUser} places={places}>
+      <Layout
+        currentUser={currentUser}
+        places={places}
+        handleSignOut={handleSignOut}
+      >
         <Switch>
-
           <Route path='/about'>
             <About />
           </Route>
-
           <Route path='/signin'>
             <SignIn handleSignIn={handleSignIn}/>
           </Route>
-
           <Route path='/signup'>
             <SignUp handleSignUp={handleSignUp}/>
           </Route>
-
           <Route path='/'>
             <MainContainer currentUser={currentUser}/>
           </Route>
-
         </Switch>
       </Layout>
     </div>

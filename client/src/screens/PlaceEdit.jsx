@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import lists from '../services/lists'
-import countries from '../services/countries'
-import months from '../services/months'
-import years from '../services/years'
+import lists from '../utils/lists'
+import countries from '../utils/countries'
+import months from '../utils/months'
+import years from '../utils/years'
 
 export default function PlaceEdit({ places, handlePlaceUpdate }) {
   

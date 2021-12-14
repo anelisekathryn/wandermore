@@ -7,7 +7,7 @@ export default function About() {
       <h3>wandermore logo here</h3>
       <h2>restless wanderer at heart? welcome home.</h2>
       <h4>pin icon here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Wandermore is where the travelers of the world come together to share their experiences and their running tab of world travels. Find inspiration and a place to rest your wandering heart with like minded souls. Track all the beautiful countries of the world you have visited, share your upcoming adventures, and put that travel wish list in writing. It is said that the world is a book, and those who do not travel read only one page. We believe your travel story should be a library of novels filled with adventure, new experiences, heart-stopping moments and unforgettable journeys. We hope you continue wandering forevermore, keeping us along for the ride.</p>
       <Link to='/signup'>
         <button>get started</button>
       </Link>

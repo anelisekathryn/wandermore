@@ -5,9 +5,11 @@ export default function SignUp(props) {
 
   const [formData, setFormData] = useState({
     username: '',
-    password: ''
+    email: '',
+    password: '',
+    profile_image_url: ''
   });
-  const { username, email, password } = formData;
+  const { username, email, password, profile_image_url } = formData;
   const { handleSignUp } = props;
 
   const handleChange = (e) => {
@@ -25,7 +27,7 @@ export default function SignUp(props) {
         handleSignUp(formData)
       }}>
         <h2>ready to wander more?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Wandermore is where the travelers of the world come together to share their experiences. Find inspiration and a place to rest your wandering heart with like minded souls. Track all the beautiful countries of the world you have visited and share your upcoming adventures all right here.</p>
         <Link to='/about'>
         <button>learn more</button>
         </Link>
@@ -59,6 +61,17 @@ export default function SignUp(props) {
             type='password'
             name='password'
             value={password}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          profile image:
+          <input
+            type='text'
+            name='profile_image_url'
+            value={profile_image_url}
             onChange={handleChange}
           />
         </label>

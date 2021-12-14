@@ -32,12 +32,12 @@ export default function PlaceAdd({handlePlaceCreate}) {
         >
         <h3>add a new place to your list</h3>
         <label>List:</label>
-        <select name='list' onChange={handleChange} defaultValue='default' >
-          <option disabledvalue='default'>
+        <select name='list' onChange={handleChange} required>
+          <option disabled value='' selected>
             – select a list -
           </option>
           {lists.map((list) => (
-            <option value={list.list} key={list.id} required>
+            <option value={list.list} key={list.id} >
             {list.list}
             </option>
           ))}
@@ -45,12 +45,12 @@ export default function PlaceAdd({handlePlaceCreate}) {
         <br />
         <br />
         <label>Country:</label>
-        <select name='country' onChange={handleChange} defaultValue='default' >
-          <option disabledvalue='default'>
+        <select name='country' onChange={handleChange} required>
+          <option disabled value='' selected>
             – select a country -
           </option>
           {countries.map((country) => (
-            <option value={country.name} key={country.id} required>
+            <option value={country.name} key={country.id} >
             {country.name}
             </option>
           ))}
@@ -59,7 +59,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
         <br />
         <label>Month:</label>
         <select name='month' onChange={handleChange} defaultValue='default'>
-          <option disabledvalue='default'>
+          <option disabled value='default'>
             – select a month -
           </option>
           {months.map((month) => (
@@ -72,7 +72,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
         <br />
         <label>Year:</label>
           <select name='year' onChange={handleChange} defaultValue='default'>
-            <option disabledvalue='default'>
+            <option disabled value='default'>
               – select a year -
             </option>
             {years.map((year) => (

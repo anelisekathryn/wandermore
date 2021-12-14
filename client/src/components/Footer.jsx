@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Places from '../screens/Places';
 
 export default function Footer({places, currentUser, handleSignOut}) {
   return (
@@ -8,7 +7,7 @@ export default function Footer({places, currentUser, handleSignOut}) {
       <p>See what else I'm working on: GitHub</p>
       {currentUser?.id === places.user_id ?
         <Link to='/signin'><button>sign in</button></Link>
-        : <Link><button onClick={handleSignOut}>logout</button></Link>
+        : <Link><button onClick={handleSignOut}>sign out</button></Link>
       }
     </footer>
   )

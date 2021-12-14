@@ -1,17 +1,16 @@
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import Footer from './Footer';
 
-export default function Layout({ children }) {
+export default function Layout({ children, currentUser, places }) {
+  let location = useLocation();
+
   return (
     <div>
-      {/* <footer>
-        <div>
-            <h3>footer text</h3>
-            <p>Site created by Anelise Kathryn</p>
-            <p>See what else I'm working on: Github</p>
-            <Link to='/signin'>sign in</Link>
-          </div>
-      </footer> */}
       {children}
+      {location.pathname === '/about' || location.pathname === '/places' ?
+        <Footer currentUser={currentUser} places={places} />
+        : null
+      }
     </div>
   )
 }

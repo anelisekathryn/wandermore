@@ -14,6 +14,7 @@ import {
 
 function App() {
 
+  const [places, setPlaces] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <div className="App">        
-      <Layout>
+      <Layout currentUser={currentUser} places={places}>
         <Switch>
 
           <Route path='/about'>

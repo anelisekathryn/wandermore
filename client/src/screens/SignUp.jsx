@@ -70,7 +70,7 @@ export default function SignUp(props) {
           profile image:
           <input
             type='text'
-            name='image'
+            name='profile_image_url'
             value={profile_image_url}
             onChange={handleChange}
           />

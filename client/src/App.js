@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Redirect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Layout from './components/Layout';
 import MainContainer from './containers/MainContainer';
@@ -58,6 +58,10 @@ function App() {
             <About />
           </Route>
           <Route path='/signin'>
+          {/* {currentUser ?
+            <Redirect to='/places' />
+            : <SignIn handleSignIn={handleSignIn}/>
+          } */}
             <SignIn handleSignIn={handleSignIn}/>
           </Route>
           <Route path='/signup'>

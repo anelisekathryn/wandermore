@@ -1,4 +1,4 @@
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route, useHistory, Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllPlaces, postPlace, putPlace, deletePlace } from '../services/place';
 import Home from '../screens/Home';
@@ -66,11 +66,14 @@ export default function MainContainer({currentUser}) {
           />
         </Route>
 
-      <Route path='/places'>
-          <Places
+        <Route path='/places'>
+          {currentUser ?
+            <Places
             places={places}
             currentUser={currentUser}
-          />
+            />
+            : <Redirect to='/signin' />
+          }
         </Route>
 
         <Route path='/'>

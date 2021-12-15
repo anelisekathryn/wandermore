@@ -1,0 +1,62 @@
+.sign-up {
+  background-image: url("https://i.imgur.com/aOgMbY6.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.sign-up-container {
+  text-align: center;
+  position: absolute;
+}
+
+.sign-up-about-text {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.sign-up-about-text a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.34);
+  border: 1.4px solid rgba(255, 255, 255, 1);
+  padding: 8px 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sign-up-container form {
+  background-color: rgba(255, 255, 255, 0.34);
+  border: 1.4px solid rgba(255, 255, 255, 1);
+  padding: 50px 50px 60px 50px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.sign-up-container h2 {
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.sign-up-container label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.sign-up-container input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  background-color: rgba(250, 250, 250, 0.34);
+  border: 1.4px solid rgba(250, 250, 250, 1);
+  margin-left: 12px;
+  margin-bottom: 10px;
+  padding: 4px;
+  color: #62535f;
+  width: 16vw;
+}

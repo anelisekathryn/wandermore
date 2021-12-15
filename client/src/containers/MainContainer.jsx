@@ -66,13 +66,6 @@ export default function MainContainer({currentUser}) {
           />
         </Route>
 
-        {/* <Route path='/places'>
-          <Places
-            places={places}
-            currentUser={currentUser}
-          />
-        </Route> */}
-
         <Route path='/places'>
           {currentUser ?
             <Places

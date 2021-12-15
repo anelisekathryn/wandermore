@@ -1,5 +1,6 @@
 .home {
   background-image: url("https://i.imgur.com/aOgMbY6.jpg");
+  overflow-y: scroll;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;

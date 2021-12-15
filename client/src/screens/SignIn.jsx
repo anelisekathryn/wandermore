@@ -49,7 +49,7 @@ export default function SignIn(props) {
           </label>
           <br />
           <br />
-          <a className='lets-go-button'>let's go</a>
+          <button className='lets-go-button'>let's go</button>
         </form>
         <p>not a member yet? sign up <Link className='sign-up-here' to='/signup'>here</Link>!</p>
       </div>

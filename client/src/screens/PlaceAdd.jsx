@@ -33,7 +33,7 @@ export default function PlaceAdd({handlePlaceCreate}) {
             handlePlaceCreate(formData);
           }}
         >
-          <img className='add-pin' src={orangePin}></img>
+          <img className='add-pin' alt='orange pin' src={orangePin}></img>
           <h2>add a new place to your list</h2>
           <label>List:</label>
           <select name='list' onChange={handleChange} required>

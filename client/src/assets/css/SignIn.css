@@ -48,11 +48,15 @@
   color: #ffffff;
   background-color: #f2713a;
   border: none;
-  padding: 6px 18px;
+  padding: 8px 20px;
   width: 48x;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;
+}
+
+.lets-go-button:hover {
+  background-color: rgba(98, 83, 95, 1);
 }
 
 .sign-in-container p {

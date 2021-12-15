@@ -5,6 +5,7 @@ export default function Footer({places, currentUser, handleSignOut}) {
     <footer>
       <p>Site created by Anelise Kathryn</p>
       <p>See what else I'm working on: GitHub</p>
+      <p>About Wandermore</p>
       {currentUser?.id === places.user_id ?
         <Link to='/signin'><button>sign in</button></Link>
         : <Link><button onClick={handleSignOut}>sign out</button></Link>

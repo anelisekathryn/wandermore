@@ -47,7 +47,7 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
           handlePlaceUpdate(id, formData);
         }}
         >
-          <img className='add-pin' src={orangePin}></img>
+          <img className='edit-pin' src={orangePin}></img>
           <h2>update this place</h2>
           <label>List:</label>
           <select name='list' onChange={handleChange} defaultValue='state'>

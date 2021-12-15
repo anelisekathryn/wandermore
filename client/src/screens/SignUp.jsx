@@ -26,7 +26,7 @@ export default function SignUp(props) {
       <div className='sign-up-container'>
         <div className='sign-up-about-text'>
           <h2>ready to wander more?</h2>
-          <p>Wandermore is where the travelers of the world come together to share their experiences. Find inspiration and a place to rest your wandering heart with like minded souls. Track all the beautiful countries of the world you have visited and share your upcoming adventures all right here.</p>
+          <p>Wandermore is where the travelers of the world come together to share their experiences. Track all the beautiful countries of the world you have visited and share your upcoming adventures all right here.</p>
           <Link to='/about'>
           learn more
           </Link>

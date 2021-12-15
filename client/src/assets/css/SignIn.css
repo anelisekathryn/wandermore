@@ -8,17 +8,14 @@
   position: relative;
 }
 
-.sign-in-container {
-  text-align: center;
-  position: absolute;
-}
-
 .sign-in-container form {
+  display: inline-block;
   background-color: rgba(255, 255, 255, 0.34);
   border: 1.4px solid rgba(255, 255, 255, 1);
   padding: 50px 50px 60px 50px;
-  width: 40%;
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .sign-in-container h2 {
@@ -62,7 +59,7 @@
   color: #ffffff;
   margin-top: 30px;
   font-weight: 500px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .sign-up-here {

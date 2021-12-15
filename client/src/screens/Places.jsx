@@ -20,35 +20,53 @@ export default function Places({ places, currentUser }) {
 
   return (
     <div>
-      <img className='count-pin' alt='orange pin' src={orangePin}></img>
-      <h5>country count</h5>
-      <h3>{placesTraveled.length}</h3>
-      <img className='profile-img' src={currentUser?.profile_image_url} alt='user profile'></img>
-      <h2>{currentUser?.username}</h2>
-      <h3>PLACES I'VE TRAVELED TO</h3>
-      {placesTraveled.map((place) => (
-        <div key={place.id}>
-          <Link to={`/places/${place.id}`}>
-            <p>{place.country} | {place.month} {place.year}</p>
-          </Link>
+      <img className='world-map' alt='world map' src='https://i.imgur.com/uatCxal.png'></img>
+      <div className='places-header'>
+        <div className='country-count'>
+          <div className='country-count-text'>
+            <img className='count-pin' alt='orange pin' src={orangePin}></img>
+            <h5>country count</h5>
+            <h3>{placesTraveled.length}</h3>
+          </div>
         </div>
-      ))}
-      <h3>UPCOMING ADVENTURES</h3>
-      {placesUpcoming.map((place) => (
-        <div key={place.id}>
-          <Link to={`/places/${place.id}`}>
-            <p>{place.country} | {place.month} {place.year}</p>
-          </Link>
+        <div className='profile-bar'></div>
+        <img className='profile-img' src={currentUser?.profile_image_url} alt='user profile'></img>
+        <h2>{currentUser?.username}</h2>
+      </div>
+      <div className='places-container'>
+        <div className='places-traveled'>
+          <h3>PLACES I'VE TRAVELED TO</h3>
+          {placesTraveled.map((place) => (
+            <div key={place.id}>
+              <Link to={`/places/${place.id}`}>
+                <p>{place.country} | {place.month} {place.year}</p>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
-      <h3>ON THE LIST</h3>
-      {placesOnList.map((place) => (
-        <div key={place.id}>
-          <Link to={`/places/${place.id}`}>
-            <p>{place.country}</p>
-          </Link>
+        <div className='places-right-container'>
+          <div className='places-upcoming'>
+            <h3>UPCOMING ADVENTURES</h3>
+            {placesUpcoming.map((place) => (
+              <div key={place.id}>
+                <Link to={`/places/${place.id}`}>
+                  <p>{place.country} | {place.month} {place.year}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className='places-list'>
+            <h3>ON THE LIST</h3>
+            {placesOnList.map((place) => (
+              <div key={place.id}>
+                <Link to={`/places/${place.id}`}>
+                  <p>{place.country}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </div>
       <Link to ='/places/add'>
         <button>add a place</button>
       </Link>

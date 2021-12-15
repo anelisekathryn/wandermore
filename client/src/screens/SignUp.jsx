@@ -1,3 +1,4 @@
+import '../assets/css/SignUp.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -21,64 +22,68 @@ export default function SignUp(props) {
   }
 
   return (
-    <div>
-      <form onSubmit={(e) => {
+    <div className='sign-up'>
+      <div className='sign-up-container'>
+        <div className='sign-up-about-text'>
+          <h2>ready to wander more?</h2>
+          <p>Wandermore is where the travelers of the world come together to share their experiences. Find inspiration and a place to rest your wandering heart with like minded souls. Track all the beautiful countries of the world you have visited and share your upcoming adventures all right here.</p>
+          <Link to='/about'>
+          learn more
+          </Link>
+        </div>
+        <br />
+        <br />
+        <form onSubmit={(e) => {
         e.preventDefault()
         handleSignUp(formData)
-      }}>
-        <h2>ready to wander more?</h2>
-        <p>Wandermore is where the travelers of the world come together to share their experiences. Find inspiration and a place to rest your wandering heart with like minded souls. Track all the beautiful countries of the world you have visited and share your upcoming adventures all right here.</p>
-        <Link to='/about'>
-        <button>learn more</button>
-        </Link>
-        <br />
-        <br />
-        <label>
-          username:
-          <input
-            type='text'
-            name='username'
-            value={username}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          email:
-          <input
-            type='text'
-            name='email'
-            value={email}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          password:
-          <input
-            type='password'
-            name='password'
-            value={password}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          profile image:
-          <input
-            type='text'
-            name='profile_image_url'
-            value={profile_image_url}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <br />
-        <button>let's go</button>
-      </form>
+        }}>
+          <label>
+            username:
+            <input
+              type='text'
+              name='username'
+              value={username}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <br />
+          <label>
+            email:
+            <input
+              type='text'
+              name='email'
+              value={email}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <br />
+          <label>
+            password:
+            <input
+              type='password'
+              name='password'
+              value={password}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <br />
+          <label>
+            profile image:
+            <input
+              type='text'
+              name='profile_image_url'
+              value={profile_image_url}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <br />
+          <a className='lets-go-button'>let's go</a>
+        </form>
+      </div>
     </div>
   )
 }

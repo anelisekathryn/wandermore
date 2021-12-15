@@ -81,7 +81,7 @@ export default function SignUp(props) {
           </label>
           <br />
           <br />
-          <a className='lets-go-button'>let's go</a>
+          <button className='lets-go-button'>let's go</button>
         </form>
       </div>
     </div>

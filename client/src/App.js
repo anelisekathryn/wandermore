@@ -58,10 +58,6 @@ function App() {
             <About />
           </Route>
           <Route path='/signin'>
-          {/* {currentUser ?
-            <Redirect to='/places' />
-            : <SignIn handleSignIn={handleSignIn}/>
-          } */}
             <SignIn handleSignIn={handleSignIn}/>
           </Route>
           <Route path='/signup'>

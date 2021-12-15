@@ -1,0 +1,61 @@
+.edit-place {
+  background-image: url("https://i.imgur.com/GHMdvBr.jpg");
+  overflow-y: scroll;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.edit-place-container form {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.34);
+  border: 1.4px solid rgba(255, 255, 255, 1);
+  padding: 50px 50px 60px 50px;
+  margin: 0 auto;
+  width: 56%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.edit-place-container h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.edit-place-container label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.edit-place-container select {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1.4px solid rgba(255, 255, 255, 1);
+  margin-left: 12px;
+  margin-bottom: 20px;
+  padding: 4px;
+  color: #000000;
+  width: 16vw;
+}
+
+.edit-button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f2713a;
+  border: none;
+  padding: 6px 18px;
+  width: 48x;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.edit-pin {
+  height: 70px;
+}

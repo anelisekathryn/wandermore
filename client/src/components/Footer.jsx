@@ -7,7 +7,7 @@ export default function Footer({places, currentUser, handleSignOut}) {
       <div className='footer-left'>
         <p>Site created by <a href="https://www.linkedin.com/in/anelisebergin/" target="_blank" rel="noreferrer">Anelise Kathryn</a></p>
         <p>See what else I'm working on: <a href="https://github.com/anelisekathryn" target="_blank" rel="noreferrer">GitHub</a></p>
-        <p><a>About Wandermore</a></p>
+        <p><a href='/about'>About Wandermore</a></p>
       </div>
       <div className='footer-right'>
         {currentUser?.id === places.user_id ?

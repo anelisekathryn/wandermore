@@ -51,7 +51,7 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
           <h2>update this place</h2>
           <label>List:</label>
           <select name='list' onChange={handleChange} defaultValue='state'>
-          <option disabledvalue='state'>
+          <option disabled value='state'>
               {formData.list}
             </option>
             {lists.map((list) => (
@@ -64,7 +64,7 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
           <br />
           <label>Country:</label>
           <select name='country' onChange={handleChange} defaultValue='state'>
-            <option disabledvalue='state'>
+            <option disabled value='state'>
               {formData.country}
             </option>
             {countries.map((country) => (
@@ -77,7 +77,7 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
           <br />
           <label>Month:</label>
           <select name='month' onChange={handleChange} defaultValue='state'>
-          <option disabledvalue='state'>
+          <option disabled value='state'>
               {formData.month}
             </option>
             {months.map((month) => (
@@ -90,7 +90,7 @@ export default function PlaceEdit({ places, handlePlaceUpdate }) {
           <br />
           <label>Year:</label>
             <select name='year' onChange={handleChange} defaultValue='state'>
-            <option disabledvalue='state'>
+            <option disabled value='state'>
               {formData.year}
             </option>
               {years.map((year) => (

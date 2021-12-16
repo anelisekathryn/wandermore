@@ -62,13 +62,13 @@ The **Wandermore** MVP goals include a clean-design, user-friendly travel site w
 
 View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLKJcpqp8LjBIGgU/wandermore?node-id=0%3A1).
 
-![Screen Shot 2021-12-09 at 9 57 47 PM](https://user-images.githubusercontent.com/90531123/145519699-8bfc38d7-d418-491b-81ec-d743e5a6ec99.png)
+<img width="1179" alt="Screen Shot 2021-12-15 at 9 32 22 PM" src="https://user-images.githubusercontent.com/90531123/146308649-51d4dbb2-f020-4eb1-b1c4-398614840131.png">
 
 <img width="300" alt="Screen Shot 2021-12-09 at 9 15 14 PM" src="https://user-images.githubusercontent.com/90531123/145516353-38030bd2-b99d-4218-bb71-b8a2bfd55b42.png">
 
 #### Component Tree
 
-![Screen Shot 2021-12-09 at 10 18 57 PM](https://user-images.githubusercontent.com/90531123/145521457-dcbf78f7-be17-4c6d-ba24-8a221dda518e.png)
+<img width="966" alt="Screen Shot 2021-12-15 at 9 28 40 PM" src="https://user-images.githubusercontent.com/90531123/146308349-0ddcf47a-2827-4cda-97ad-8edebfe5afb0.png">
 
 #### Component Architecture
 
@@ -118,8 +118,6 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Planning                                 |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
@@ -159,8 +157,51 @@ src
 
 ## Code Showcase
 
-> This section will include a brief code snippet of functionality that you are proud of and a brief description.
+**Footer:** Ternary operator in layout to render footer conditionally (only on about and places pages) + ternary operator to change footer button (sign in / log out) based on whether a user is logged in.
+
+```
+    <div>
+      {children}
+      {location.pathname === '/about' || location.pathname === '/places' ?
+        <Footer
+          currentUser={currentUser}
+          places={places}
+          handleSignOut={handleSignOut}
+        />
+        : null
+      }
+    </div>
+  )
+}
+```
+
+```
+<footer>
+    .
+    .
+    <div className='footer-right'>
+      {currentUser?.id === places.user_id ?
+        <Link to='/signin'><button>sign in</button></Link>
+        : <Link><button onClick={handleSignOut}>sign out</button></Link>
+      }
+    </div>
+  </footer>
+```
 
 ## Code Issues & Resolutions
 
-> This section will include a list of major issues encountered and their resolution.
+**Place Edit:** Needed to prefill data with current state in dropdowns on the edit page so that the dropdowns defaulted the user's current data for that place. I assigned the default value a name of state, passed in a disabled value named state as the first option, then passed in state of that data piece (ie {formData.country}).
+
+```
+    <label>Country:</label>
+      <select name='country' onChange={handleChange} defaultValue='state'>
+        <option disabled value='state'>
+          {formData.country}
+        </option>
+        {countries.map((country) => (
+          <option value={country.name} key={country.id} required>
+          {country.name}
+          </option>
+        ))}
+      </select>
+```

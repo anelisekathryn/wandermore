@@ -62,13 +62,13 @@ The **Wandermore** MVP goals include a clean-design, user-friendly travel site w
 
 View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLKJcpqp8LjBIGgU/wandermore?node-id=0%3A1).
 
-![Screen Shot 2021-12-09 at 9 57 47 PM](https://user-images.githubusercontent.com/90531123/145519699-8bfc38d7-d418-491b-81ec-d743e5a6ec99.png)
+<img width="1179" alt="Screen Shot 2021-12-15 at 9 32 22 PM" src="https://user-images.githubusercontent.com/90531123/146308649-51d4dbb2-f020-4eb1-b1c4-398614840131.png">
 
 <img width="300" alt="Screen Shot 2021-12-09 at 9 15 14 PM" src="https://user-images.githubusercontent.com/90531123/145516353-38030bd2-b99d-4218-bb71-b8a2bfd55b42.png">
 
 #### Component Tree
 
-![Screen Shot 2021-12-09 at 10 18 57 PM](https://user-images.githubusercontent.com/90531123/145521457-dcbf78f7-be17-4c6d-ba24-8a221dda518e.png)
+<img width="966" alt="Screen Shot 2021-12-15 at 9 28 40 PM" src="https://user-images.githubusercontent.com/90531123/146308349-0ddcf47a-2827-4cda-97ad-8edebfe5afb0.png">
 
 #### Component Architecture
 
@@ -76,62 +76,64 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 src
 |__ assets/
       |__ css
-          |__ Layout.css
+          |__ About.css
+          |__ Footer.css
           |__ Home.css
+          |__ Layout.css
+          |__ PlaceAdd.css
+          |__ PlaceDetail.css
+          |__ PlaceEdit.css
+          |__ Places.css
           |__ SignIn.css
           |__ SignUp.css
-          |__ About.css
-          |__ UserProfile.css
-          |__ PlaceDetail.css
-          |__ PlaceAdd.css
-          |__ PlaceEdit.css
-      |__ fonts
       |__ graphics
-      |__ images
 |__ components/
-      |__ Layout.jsx
       |__ Footer.jsx
-      |__ Place.jsx
+      |__ Layout.jsx
 |__ containers/
       |__ MainContainer.jsx
 |__ screens/
+      |__ About.jsx
       |__ Home.jsx
+      |__ PlaceAdd.jsx
+      |__ PlaceDetail.jsx
+      |__ PlaceEdit.jsx
+      |__ Places.jsx
       |__ SignIn.jsx
       |__ SignUp.jsx
-      |__ About.jsx
-      |__ UserProfile.jsx
-      |__ PlaceDetail.jsx
-      |__ PlaceAdd.jsx
-      |__ PlaceEdit.jsx
 |__ services/
       |__ apiConfig.jsx
       |__ auth.jsx
+      |__ place.jsx
+|__ utils/
+      |__ countries.json
+      |__ lists.json
+      |__ months.json
+      |__ years.json
 |__ App.css
-|__ App.jsx
+|__ App.js
 |__ Index.css
-|__ Index.jsx
+|__ Index.js
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning                                 |    H     |     6 hrs      |     6 hrs     |    X hrs    |
-| Backend set up / Auth                    |    H     |     7 hrs      |     4 hrs     |    X hrs    |
-| Create Database & Seed Data              |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
-| Backend Routes & Testing                 |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
-| Frontend Auth                            |    H     |     4 hrs      |     3 hrs     |    X hrs    |
-| Frontend Routes & Testing                |    H     |     5 hrs      |     3 hrs     |    X hrs    |
-| Full CRUD on Places                      |    H     |     7 hrs      |    10 hrs     |    X hrs    |
-| Layout                                   |    H     |     2 hrs      |     2 hrs     |    X hrs    |
-| Create Footer                            |    H     |     2 hrs      |     2 hrs     |    X hrs    |
-| Create All Screens                       |    H     |     12 hrs     |    12 hrs     |    X hrs    |
-| Component Updates + Add'l Frontend Logic |    H     |     4 hrs      |     4 hrs     |    X hrs    |
-| CSS Styling                              |    M     |     10 hrs     |     X hrs     |    X hrs    |
-| Post MVP goals                           |    L     |     6 hrs      |     X hrs     |    X hrs    |
-| TOTAL                                    |          |     65 hrs     |     X hrs     |     TBD     |
+| Planning                                 |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
+| Backend set up / Auth                    |    H     |     7 hrs      |     4 hrs     |    4 hrs    |
+| Create Database & Seed Data              |    H     |     3 hrs      |    0.5 hrs    |   0.5 hrs   |
+| Backend Routes & Testing                 |    H     |     1 hrs      |    0.5 hrs    |   0.5 hrs   |
+| Frontend Auth                            |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Frontend Routes & Testing                |    H     |     5 hrs      |     3 hrs     |    3 hrs    |
+| Full CRUD on Places                      |    H     |     7 hrs      |    10 hrs     |   10 hrs    |
+| Layout                                   |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Create Footer                            |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Create All Screens                       |    H     |     12 hrs     |    12 hrs     |   12 hrs    |
+| Component Updates + Add'l Frontend Logic |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| CSS Styling                              |    M     |     10 hrs     |    12 hrs     |   12 hrs    |
+| Post MVP goals                           |    L     |     6 hrs      |     1 hrs     |    1 hrs    |
+| TOTAL                                    |          |     65 hrs     |    60 hrs     |   60 hrs    |
 
 <br>
 
@@ -155,8 +157,51 @@ src
 
 ## Code Showcase
 
-> This section will include a brief code snippet of functionality that you are proud of and a brief description.
+**Footer:** Ternary operator in layout to render footer conditionally (only on about and places pages) + ternary operator to change footer button (sign in / log out) based on whether a user is logged in.
+
+```
+    <div>
+      {children}
+      {location.pathname === '/about' || location.pathname === '/places' ?
+        <Footer
+          currentUser={currentUser}
+          places={places}
+          handleSignOut={handleSignOut}
+        />
+        : null
+      }
+    </div>
+  )
+}
+```
+
+```
+<footer>
+    .
+    .
+    <div className='footer-right'>
+      {currentUser?.id === places.user_id ?
+        <Link to='/signin'><button>sign in</button></Link>
+        : <Link><button onClick={handleSignOut}>sign out</button></Link>
+      }
+    </div>
+  </footer>
+```
 
 ## Code Issues & Resolutions
 
-> This section will include a list of major issues encountered and their resolution.
+**Place Edit:** Needed to prefill data with current state in dropdowns on the edit page so that the dropdowns defaulted the user's current data for that place. I assigned the default value a name of state, passed in a disabled value named state as the first option, then passed in state of that data piece (ie {formData.country}).
+
+```
+    <label>Country:</label>
+      <select name='country' onChange={handleChange} defaultValue='state'>
+        <option disabled value='state'>
+          {formData.country}
+        </option>
+        {countries.map((country) => (
+          <option value={country.name} key={country.id} required>
+          {country.name}
+          </option>
+        ))}
+      </select>
+```

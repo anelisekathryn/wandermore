@@ -15,6 +15,12 @@
   margin-right: 100px;
 }
 
+@media (max-width: 769px) {
+  .country-count {
+    display: none;
+  }
+}
+
 .country-count-text {
   margin: auto;
   padding: 12px;
@@ -94,6 +100,7 @@
   font-weight: 400;
   font-size: 20px;
   padding: 8px;
+  margin-top: 0px;
 }
 
 .places-traveled {
@@ -101,6 +108,7 @@
   width: 40%;
   margin: 0 auto;
   padding-bottom: 18px;
+  margin-bottom: 50px;
 }
 
 .places-traveled a:hover {
@@ -123,6 +131,7 @@
   width: 40%;
   margin: 0 auto;
   padding-bottom: 18px;
+  margin-bottom: 50px;
 }
 
 .places-upcoming a:hover {
@@ -145,12 +154,40 @@
   width: 40%;
   margin: 0 auto;
   padding-bottom: 18px;
-  margin-bottom: 40px;
 }
 
 .places-list a:hover {
   color: #415c63;
   font-weight: 500;
+}
+
+/* PLACES LIST - DESKTOP ================================ */
+
+@media (min-width: 769px) {
+  .places-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .places-right-container {
+    width: 40%;
+  }
+  .places-traveled {
+    margin: 0;
+  }
+  .places-traveled {
+    padding-bottom: 10px;
+  }
+  .places-upcoming {
+    margin: 0;
+    width: 100%;
+  }
+  .places-upcoming h3 {
+    margin-top: 0;
+  }
+  .places-list {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 /* ADD BUTTON =========================================== */
@@ -165,7 +202,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 70px;
 }
 

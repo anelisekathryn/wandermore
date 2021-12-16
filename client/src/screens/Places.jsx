@@ -38,14 +38,14 @@ export default function Places({ places, currentUser }) {
       <div className='places-container'>
         <div className='places-traveled'>
           <h3>PLACES I'VE TRAVELED TO</h3>
-          {placesTraveled.map((place) => (
-            <div key={place.id} className='places-map'>
-              <img alt='orange pin' src={orangePin}></img>
-              <Link to={`/places/${place.id}`}>
-                <p>{place.country} | {place.month} {place.year}</p>
-              </Link>
-            </div>
-          ))}
+            {placesTraveled.map((place) => (
+              <div key={place.id} className='places-map'>
+                <img alt='orange pin' src={orangePin}></img>
+                <Link to={`/places/${place.id}`}>
+                  <p>{place.country} | {place.month} {place.year}</p>
+                </Link>
+              </div>
+            ))}
         </div>
         <div className='places-right-container'>
           <div className='places-upcoming'>

@@ -76,40 +76,44 @@ View complete wireframe and branding [here](https://www.figma.com/file/k1FAcMeLK
 src
 |__ assets/
       |__ css
-          |__ Layout.css
+          |__ About.css
+          |__ Footer.css
           |__ Home.css
+          |__ Layout.css
+          |__ PlaceAdd.css
+          |__ PlaceDetail.css
+          |__ PlaceEdit.css
+          |__ Places.css
           |__ SignIn.css
           |__ SignUp.css
-          |__ About.css
-          |__ UserProfile.css
-          |__ PlaceDetail.css
-          |__ PlaceAdd.css
-          |__ PlaceEdit.css
-      |__ fonts
       |__ graphics
-      |__ images
 |__ components/
-      |__ Layout.jsx
       |__ Footer.jsx
-      |__ Place.jsx
+      |__ Layout.jsx
 |__ containers/
       |__ MainContainer.jsx
 |__ screens/
+      |__ About.jsx
       |__ Home.jsx
+      |__ PlaceAdd.jsx
+      |__ PlaceDetail.jsx
+      |__ PlaceEdit.jsx
+      |__ Places.jsx
       |__ SignIn.jsx
       |__ SignUp.jsx
-      |__ About.jsx
-      |__ UserProfile.jsx
-      |__ PlaceDetail.jsx
-      |__ PlaceAdd.jsx
-      |__ PlaceEdit.jsx
 |__ services/
       |__ apiConfig.jsx
       |__ auth.jsx
+      |__ place.jsx
+|__ utils/
+      |__ countries.json
+      |__ lists.json
+      |__ months.json
+      |__ years.json
 |__ App.css
-|__ App.jsx
+|__ App.js
 |__ Index.css
-|__ Index.jsx
+|__ Index.js
 ```
 
 #### Time Estimates
@@ -118,20 +122,20 @@ src
 
 | Task                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning                                 |    H     |     6 hrs      |     6 hrs     |    X hrs    |
-| Backend set up / Auth                    |    H     |     7 hrs      |     4 hrs     |    X hrs    |
-| Create Database & Seed Data              |    H     |     3 hrs      |    0.5 hrs    |    X hrs    |
-| Backend Routes & Testing                 |    H     |     1 hrs      |    0.5 hrs    |    X hrs    |
-| Frontend Auth                            |    H     |     4 hrs      |     3 hrs     |    X hrs    |
-| Frontend Routes & Testing                |    H     |     5 hrs      |     3 hrs     |    X hrs    |
-| Full CRUD on Places                      |    H     |     7 hrs      |    10 hrs     |    X hrs    |
-| Layout                                   |    H     |     2 hrs      |     2 hrs     |    X hrs    |
-| Create Footer                            |    H     |     2 hrs      |     2 hrs     |    X hrs    |
-| Create All Screens                       |    H     |     12 hrs     |    12 hrs     |    X hrs    |
-| Component Updates + Add'l Frontend Logic |    H     |     4 hrs      |     4 hrs     |    X hrs    |
-| CSS Styling                              |    M     |     10 hrs     |     X hrs     |    X hrs    |
-| Post MVP goals                           |    L     |     6 hrs      |     X hrs     |    X hrs    |
-| TOTAL                                    |          |     65 hrs     |     X hrs     |     TBD     |
+| Planning                                 |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
+| Backend set up / Auth                    |    H     |     7 hrs      |     4 hrs     |    4 hrs    |
+| Create Database & Seed Data              |    H     |     3 hrs      |    0.5 hrs    |   0.5 hrs   |
+| Backend Routes & Testing                 |    H     |     1 hrs      |    0.5 hrs    |   0.5 hrs   |
+| Frontend Auth                            |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Frontend Routes & Testing                |    H     |     5 hrs      |     3 hrs     |    3 hrs    |
+| Full CRUD on Places                      |    H     |     7 hrs      |    10 hrs     |   10 hrs    |
+| Layout                                   |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Create Footer                            |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Create All Screens                       |    H     |     12 hrs     |    12 hrs     |   12 hrs    |
+| Component Updates + Add'l Frontend Logic |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| CSS Styling                              |    M     |     10 hrs     |    12 hrs     |   12 hrs    |
+| Post MVP goals                           |    L     |     6 hrs      |     1 hrs     |    1 hrs    |
+| TOTAL                                    |          |     65 hrs     |    60 hrs     |   60 hrs    |
 
 <br>
 

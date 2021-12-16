@@ -86,10 +86,17 @@
   margin-left: 35px;
 }
 
+@media (max-width: 769px) {
+  .places-map {
+    margin-left: 20px;
+  }
+}
+
 .places-container a {
   text-decoration: none;
   color: #000000;
   font-weight: 300;
+  font-size: 1.7vw;
 }
 
 /* PLACES TRAVELED =========================================== */
@@ -98,7 +105,7 @@
   background-color: #f2713a;
   color: #ffffff;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 2.1vw;
   padding: 8px;
   margin-top: 0px;
 }
@@ -116,13 +123,25 @@
   font-weight: 500;
 }
 
+@media (max-width: 769px) {
+  .places-traveled {
+    width: 60%;
+  }
+  .places-container a {
+    font-size: 2.5vw;
+  }
+  .places-traveled h3 {
+    font-size: 3vw;
+  }
+}
+
 /* PLACES UPCOMING =========================================== */
 
 .places-upcoming h3 {
   background-color: #62535f;
   color: #ffffff;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 2.1vw;
   padding: 8px;
 }
 
@@ -139,13 +158,25 @@
   font-weight: 500;
 }
 
+@media (max-width: 769px) {
+  .places-upcoming {
+    width: 60%;
+  }
+  .places-container a {
+    font-size: 2.5vw;
+  }
+  .places-upcoming h3 {
+    font-size: 3vw;
+  }
+}
+
 /* PLACES LIST =========================================== */
 
 .places-list h3 {
   background-color: #415c63;
   color: #ffffff;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 2.1vw;
   padding: 8px;
 }
 
@@ -159,6 +190,18 @@
 .places-list a:hover {
   color: #415c63;
   font-weight: 500;
+}
+
+@media (max-width: 769px) {
+  .places-list {
+    width: 60%;
+  }
+  .places-container a {
+    font-size: 2.5vw;
+  }
+  .places-list h3 {
+    font-size: 3vw;
+  }
 }
 
 /* PLACES LIST - DESKTOP ================================ */

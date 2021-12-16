@@ -1,5 +1,7 @@
 import '../assets/css/Places.css';
 import orangePin from '../assets/graphics/pin-orange.png'
+import mauvePin from '../assets/graphics/pin-mauve.png'
+import bluePin from '../assets/graphics/pin-blue.png'
 import { Link } from 'react-router-dom';
 
 export default function Places({ places, currentUser }) {
@@ -37,7 +39,8 @@ export default function Places({ places, currentUser }) {
         <div className='places-traveled'>
           <h3>PLACES I'VE TRAVELED TO</h3>
           {placesTraveled.map((place) => (
-            <div key={place.id}>
+            <div key={place.id} className='places-map'>
+              <img alt='orange pin' src={orangePin}></img>
               <Link to={`/places/${place.id}`}>
                 <p>{place.country} | {place.month} {place.year}</p>
               </Link>
@@ -48,7 +51,8 @@ export default function Places({ places, currentUser }) {
           <div className='places-upcoming'>
             <h3>UPCOMING ADVENTURES</h3>
             {placesUpcoming.map((place) => (
-              <div key={place.id}>
+              <div key={place.id} className='places-map'>
+                <img alt='mauve pin' src={mauvePin}></img>
                 <Link to={`/places/${place.id}`}>
                   <p>{place.country} | {place.month} {place.year}</p>
                 </Link>
@@ -58,7 +62,8 @@ export default function Places({ places, currentUser }) {
           <div className='places-list'>
             <h3>ON THE LIST</h3>
             {placesOnList.map((place) => (
-              <div key={place.id}>
+              <div key={place.id} className='places-map'>
+                <img alt='blue pin' src={bluePin}></img>
                 <Link to={`/places/${place.id}`}>
                   <p>{place.country}</p>
                 </Link>
@@ -68,7 +73,7 @@ export default function Places({ places, currentUser }) {
         </div>
       </div>
       <Link to ='/places/add'>
-        <button>add a place</button>
+        <button className='add-place-button'>add a place</button>
       </Link>
     </div>
   )

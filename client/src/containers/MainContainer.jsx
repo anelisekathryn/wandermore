@@ -7,7 +7,6 @@ import PlaceDetail from '../screens/PlaceDetail'
 import PlaceAdd from '../screens/PlaceAdd';
 import PlaceEdit from '../screens/PlaceEdit';
 
-
 export default function MainContainer({currentUser}) {
 
   const [places, setPlaces] = useState([]);
@@ -43,31 +42,23 @@ export default function MainContainer({currentUser}) {
     history.push('/places');
   };
 
-  console.log(currentUser?.id)
-
   return (
-
-    
     <div>
       <Switch>
-
       <Route path='/places/:id/edit'>
           <PlaceEdit places={places} handlePlaceUpdate={handlePlaceUpdate} />
         </Route>
-
       <Route path='/places/add'>
           <PlaceAdd
             handlePlaceCreate={handlePlaceCreate}
           />
         </Route>
-
         <Route path='/places/:id'>
           <PlaceDetail
             currentUser={currentUser}
             handlePlaceDelete={handlePlaceDelete}
           />
         </Route>
-
         <Route path='/places'>
           {currentUser?.id && (currentUser ?
             <Places
@@ -76,9 +67,7 @@ export default function MainContainer({currentUser}) {
             />
             : <Redirect to='/signin' />
           )}
-
         </Route>
-
         <Route path='/'>
           {!currentUser ?
             <Home
@@ -88,9 +77,6 @@ export default function MainContainer({currentUser}) {
             : <Redirect to='/places' />
           }
         </Route>
-
-
-
       </Switch>
     </div>
   )

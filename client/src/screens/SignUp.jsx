@@ -31,8 +31,7 @@ export default function SignUp(props) {
           learn more
           </Link>
         </div>
-        <br />
-        <br />
+        <br /><br />
         <form onSubmit={(e) => {
         e.preventDefault()
         handleSignUp(formData)
@@ -46,8 +45,7 @@ export default function SignUp(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <label>
             email:
             <input
@@ -57,8 +55,7 @@ export default function SignUp(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <label>
             password:
             <input
@@ -68,8 +65,7 @@ export default function SignUp(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <label>
             profile image:
             <input
@@ -79,8 +75,7 @@ export default function SignUp(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <button className='lets-go-button'>let's go</button>
         </form>
       </div>

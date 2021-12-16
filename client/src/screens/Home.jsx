@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className='home'>
       <div className='home-content'>
-        <img src={logo} alt='wandermore logo'></img>
+        <img alt='wandermore logo' src={logo}></img>
         <br />
         <div className='home-links'>
           <Link to='/signin'>sign in</Link>

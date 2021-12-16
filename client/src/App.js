@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, Redirect } from 'react';
+import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Layout from './components/Layout';
 import MainContainer from './containers/MainContainer';

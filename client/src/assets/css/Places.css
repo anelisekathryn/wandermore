@@ -1,3 +1,211 @@
+/* PROFILE HEADER =========================================== */
+
+.world-map {
+  width: 100%;
+}
+
+.country-count {
+  background-color: white;
+  border: solid 0.4px #62535f;
+  border-radius: 50%;
+  width: 126px;
+  height: 126px;
+  float: right;
+  margin-top: -55px;
+  margin-right: 100px;
+}
+
+@media (max-width: 769px) {
+  .country-count {
+    display: none;
+  }
+}
+
+.country-count-text {
+  margin: auto;
+  padding: 12px;
+}
+
+.count-pin {
+  width: 30px;
+}
+
+.country-count-text h5 {
+  margin: 0;
+  color: #f2713a;
+}
+
+.country-count-text h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 10px;
+  margin: 0;
+  color: #b4918d;
+}
+
+.profile-bar {
+  width: 100%;
+  height: 120px;
+  background-color: #b4918d;
+  border-bottom: solid #62535f 20px;
+}
+
 .profile-img {
-  width: 150px;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -120px;
+  margin-left: 30px;
+  float: left;
+}
+
+.places-header h2 {
+  margin-left: 16px;
+  margin-top: 20px;
+  float: left;
+  color: #62535f;
+}
+
+/* PLACES LIST BOXES =========================================== */
+
+.places-container {
+  margin-top: 150px;
+}
+
+.places-container img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.places-map {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+}
+
+.places-container a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 300;
+}
+
+/* PLACES TRAVELED =========================================== */
+
+.places-traveled h3 {
+  background-color: #f2713a;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 8px;
+  margin-top: 0px;
+}
+
+.places-traveled {
+  background-color: rgba(65, 92, 99, 0.1);
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  margin-bottom: 50px;
+}
+
+.places-traveled a:hover {
+  color: #f2713a;
+  font-weight: 500;
+}
+
+/* PLACES UPCOMING =========================================== */
+
+.places-upcoming h3 {
+  background-color: #62535f;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.places-upcoming {
+  background-color: rgba(65, 92, 99, 0.1);
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  margin-bottom: 50px;
+}
+
+.places-upcoming a:hover {
+  color: #62535f;
+  font-weight: 500;
+}
+
+/* PLACES LIST =========================================== */
+
+.places-list h3 {
+  background-color: #415c63;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.places-list {
+  background-color: rgba(65, 92, 99, 0.1);
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 18px;
+}
+
+.places-list a:hover {
+  color: #415c63;
+  font-weight: 500;
+}
+
+/* PLACES LIST - DESKTOP ================================ */
+
+@media (min-width: 769px) {
+  .places-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .places-right-container {
+    width: 40%;
+  }
+  .places-traveled {
+    margin: 0;
+  }
+  .places-traveled {
+    padding-bottom: 10px;
+  }
+  .places-upcoming {
+    margin: 0;
+    width: 100%;
+  }
+  .places-upcoming h3 {
+    margin-top: 0;
+  }
+  .places-list {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* ADD BUTTON =========================================== */
+
+.add-place-button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f2713a;
+  border: none;
+  padding: 6px 18px;
+  width: 48x;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.add-place-button:hover {
+  background-color: #415c63;
 }

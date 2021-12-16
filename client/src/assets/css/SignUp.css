@@ -40,6 +40,10 @@
   font-size: 15px;
 }
 
+.sign-up-about-text a:hover {
+  background-color: rgba(242, 113, 58, 0.7);
+}
+
 .sign-up-container form {
   background-color: rgba(255, 255, 255, 0.34);
   border: 1.4px solid rgba(255, 255, 255, 1);

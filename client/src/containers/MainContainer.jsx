@@ -43,6 +43,8 @@ export default function MainContainer({currentUser}) {
     history.push('/places');
   };
 
+  console.log(currentUser?.id)
+
   return (
 
     
@@ -67,13 +69,14 @@ export default function MainContainer({currentUser}) {
         </Route>
 
         <Route path='/places'>
-          {currentUser ?
+          {currentUser?.id && (currentUser ?
             <Places
             places={places}
             currentUser={currentUser}
             />
             : <Redirect to='/signin' />
-          }
+          )}
+
         </Route>
 
         <Route path='/'>

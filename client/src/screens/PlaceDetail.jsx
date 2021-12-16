@@ -1,3 +1,5 @@
+import '../assets/css/PlaceDetail.css';
+import orangePin from '../assets/graphics/pin-orange.png'
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getOnePlace } from '../services/place';
@@ -16,13 +18,16 @@ export default function PlaceDetail({ handlePlaceDelete }) {
   }, [id]);
 
   return (
-    <div>
-      <h2>place detail here</h2>
-      <h3>{place?.country} | {place?.month} {place?.year}</h3>
+    <div className='place-detail'>
+      <div className='detail-title'>
+        <img className='detail-pin' alt='orange pin' src={orangePin}></img>
+        <h2>{place?.country}</h2>
+      </div>
+      <h3>{place?.month} {place?.year}</h3>
       <Link to ={`/places/${id}/edit`}>
-        <button>edit</button>
+        <button className='detail-button'>edit</button>
       </Link>
-      <button onClick={() => handlePlaceDelete(id)}>delete</button>
+      <button className='detail-button' onClick={() => handlePlaceDelete(id)}>delete</button>
     </div>
   )
 }

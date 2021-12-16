@@ -50,13 +50,37 @@
   height: 80px;
 }
 
+@media (max-width: 375px) {
+  .about-hero {
+    height: 200px;
+  }
+  .about-hero-content h1 {
+    font-size: 5.5vw;
+    margin-top: 26px;
+    margin-bottom: 24px;
+  }
+  .about-hero-content img {
+    width: 130px;
+    margin-bottom: 5px;
+  }
+  .about-content h2 {
+    font-size: 24px;
+  }
+  .about-pin {
+    height: 60px;
+  }
+  .about-content p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
 .get-started-button {
   text-decoration: none;
   color: #ffffff;
   background-color: #f2713a;
   border: none;
-  padding: 6px 18px;
-  width: 48x;
+  padding: 10px 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;

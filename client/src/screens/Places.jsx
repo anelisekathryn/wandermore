@@ -9,16 +9,6 @@ export default function Places({ places, currentUser }) {
   const placesTraveled = places.filter(place => place.list === 'Traveled To')
   const placesUpcoming = places.filter(place => place.list === 'Upcoming Adventures')
   const placesOnList = places.filter(place => place.list === 'On The List')
-  // function countryCount(a) {
-  //   var newArr = [];
-  //     for (var i = 0; i < a.length; i++) {
-  //       if (newArr.indexOf(a[i]) === -1) {
-  //           newArr.push(a[i]);
-  //       }
-  //     }
-  //   return newArr;
-  // }
-  // console.log(countryCount(placesTraveled))
 
   return (
     <div>

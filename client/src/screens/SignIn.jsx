@@ -36,8 +36,7 @@ export default function SignIn(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <label>
             password:
             <input
@@ -47,8 +46,7 @@ export default function SignIn(props) {
               onChange={handleChange}
             />
           </label>
-          <br />
-          <br />
+          <br /><br />
           <button className='lets-go-button'>let's go</button>
         </form>
         <p>not a member yet? sign up <Link className='sign-up-here' to='/signup'>here</Link>!</p>
